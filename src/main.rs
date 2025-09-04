@@ -54,10 +54,68 @@ fn main() {
     //     println!("n is zero");
     // }
 
-    for i in 0..6 {
-        print!("{}", i);
-    }
+    // for i in 0..6 {
+    //     print!("{}", i);
+    // }
+
+    // let i = 9;
+    // match i {
+    //     0 => println!("zero"),
+    //     1 | 2 => println!("two"),
+    //     3..=5 => println!("3,4,5"),
+    //     _ => println!("default"),
+    // }
+
+    // let name = String::from("Eagle");
+    // let bird = Bird {
+    //     name: name,
+    //     attack: 10,
+    // };
+    // bird.print_name();
+    // println!("{} {}", bird.can_fly(), bird.is_animal());
+
+    // let a: MyEnum = MyEnum::A;
+    // let b: MyEnum = MyEnum::B(5);
+    // let c: MyEnum = MyEnum::C { x: 10, y: 20 };
+
+    // println!("{:?}", a);
+    // println!("{:?}", b);
+    // println!("{:?}", c);
 }
+
+// #[derive(Debug)]
+// enum MyEnum {
+//     A,
+//     B(i32),
+//     C { x: i32, y: i32 },
+// }
+
+// struct Bird {
+//     name: String,
+//     attack: u8,
+// }
+
+// impl Bird {
+//     fn print_name(&self) {
+//         println!("Bird name: {}", self.name);
+//     }
+// }
+
+// impl Animal for Bird {
+//     fn can_fly(&self) -> bool {
+//         true
+//     }
+//     fn is_animal(&self) -> bool {
+//         false
+//     }
+// }
+
+// trait Animal {
+//     fn can_fly(&self) -> bool;
+//     fn is_animal(&self) -> bool {
+//         true
+//     }
+// }
 
 // fn borrowing_slice(arr: [u8; 4], slice: &[u8]) {
 //     println!("{:?}", arr);
