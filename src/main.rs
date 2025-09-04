@@ -1,4 +1,37 @@
+use std::collections::HashMap;
+
+#[derive(Debug)]
+enum MyError {
+    Error1,
+}
+
+fn divide(dividend: i32, divisor: i32) -> Result<i32, MyError> {
+    if divisor == 0 {
+        Err(MyError::Error1)
+    } else {
+        Ok(dividend / divisor)
+    }
+}
+
 fn main() {
+    // let divide = divide(4, 2);
+
+    // match divide {
+    //     Ok(v) => println!("value: {}", v),
+    //     Err(e) => println!("error: {:?}", e),
+    // }
+
+    let divide = divide(4, 3);
+    let res = divide.expect("We crashed");
+
+    println!("value: {}", res);
+
+    // let divide1: Option<i32> = divide(4, 2);
+    // let divide2: Option<i32> = divide(2, 3);
+
+    // println!("divide1: {:?}", divide1, divide1.unwrap());
+    // println!("divide2: {:?}", divide2, divide2.unwrap());
+
     // let _unsigned: u8 = 10;
 
     // let _signed: i8 = -10;
@@ -81,6 +114,13 @@ fn main() {
     // println!("{:?}", a);
     // println!("{:?}", b);
     // println!("{:?}", c);
+
+    // let mut vec: Vec<i64> = vec![1, 2, 3, 4, 5];
+    // vec.len();
+    // vec[0];
+    // vec.push(6);
+    // vec.remove(0);
+    // println!("{:?}", vec);
 }
 
 // #[derive(Debug)]
